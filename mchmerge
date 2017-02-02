@@ -11,8 +11,13 @@ FROM 'child obj`)
 CREATE OR UPDATE VIEW DupEmails AS
 SELECT *
 FROM 'parent obj`
-WHERE  EMailAddress
+WHERE  
+EMAIL_MARKETING_STATUS = "Subscribed"
+AND
+EMailAddress
 IN
 (SELECT EmailAddress
-FROM 'child obj`)
+FROM 'child obj`
+WHERE
+EMAIL_MARKETING_STATUS = "Subscribed")
 
