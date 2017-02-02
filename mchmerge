@@ -1,0 +1,11 @@
+/* Basic Script Extract Duplicates from PARENT and CHILD */
+SELECT *
+FROM 'parent obj`
+WHERE  EMailAddress
+IN
+(SELECT EmailAddress
+FROM 'child obj`)
+
+
+/* View Creation - to create Duplicates list as an object */
+
